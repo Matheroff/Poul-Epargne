@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Eina01";
+  src: url("/Eina01-SemiBold.ttf");
+}
+
+* {
+  margin: 0;
+  font-family: "Eina01";
+}
+
+#root {
+  height: 100vh;
+  background: url("./assets/graph-paper.svg"), linear-gradient(to right, #ec2F4B, #009FFF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

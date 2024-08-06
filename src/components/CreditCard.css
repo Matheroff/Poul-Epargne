@@ -1,0 +1,193 @@
+#cardContainer {
+    position: relative;
+    min-width: 350px;
+    aspect-ratio: 43/27;
+    color: rgb(255, 255, 255);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+    .creditCard {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgb(95, 96, 97);
+        border-radius: 20px;
+        border-top: 2px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid rgb(58, 57, 57);
+        border-bottom: 2px solid rgb(63, 62, 62);
+        backface-visibility: hidden;
+
+    }
+
+    .front {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .bankName {
+            display: flex;
+            align-items: flex-end;
+            padding: 10px;
+
+            img {
+                width: 30px;
+            }
+
+            p {
+                font-size: 0.9rem;
+                line-height: 0.8rem;
+                margin-left: 5px;
+            }
+        }
+
+        .microChip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img:first-child {
+                width: 25px;
+                margin-left: 5px;
+            }
+
+            img:nth-child(2) {
+                width: 40px;
+            }
+        }
+
+        .cardNumber {
+            margin-left: 10%;
+        }
+
+        .content {
+            text-align: end;
+            width: 60%;
+            font-size: 8px;
+            display: flex;
+            align-items: end;
+            line-height: 1rem;
+            gap: 10px;
+
+
+            .expiration {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                line-height: 0.5rem;
+                gap: 5px;
+
+                .date {
+                    font-size: 12px;
+                    margin-right: 1rem;
+                }
+            }
+
+            .name {
+                font-size: 0.8rem;
+            }
+
+        }
+
+        #insert {
+            width: 20px;
+            margin-left: 5px;
+        }
+
+        #goldChicken {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 60px;
+        }
+
+
+        .visa {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 60px;
+        }
+    }
+
+    .back {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.4rem;
+        gap: 10px;
+        transform: rotateY(180deg);
+
+        .createdAt {
+            margin: 0.2rem 0.5rem 0 0;
+            text-align: end;
+        }
+
+        .cardTrack {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(145, 145, 145);
+
+        }
+
+        .signatureContainer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+
+            p {
+                font-size: 0.5rem;
+            }
+
+            .signature {
+                background: url("../assets/barreCode.png");
+                background-size: 100% 100%;
+                width: 75%;
+                height: 40px;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                position: relative;
+
+                p {
+                    color: black;
+                    font-family: monospace;
+                    font-style: italic;
+                    margin-right: 10px;
+                }
+
+                &::before {
+                    content: "SIGNATURE DU TITULAIRE OBLIGATOIRE";
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+        }
+
+        .policy {
+            width: 65%;
+            margin: 0 auto;
+        }
+
+        #cb {
+            width: 50px;
+        }
+
+        #holoChicken {
+            width: 50px;
+            position: absolute;
+            bottom: 35px;
+            left: 10px;
+        }
+
+        .visa {
+            width: 50px;
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+        }
+    }
+}
